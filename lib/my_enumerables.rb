@@ -46,6 +46,14 @@ module Enumerable
     end
     result
   end
+
+  def my_map
+    result = []
+    for e in self
+      result << yield(e)
+    end
+    result
+  end
 end
 
 class Array
