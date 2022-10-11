@@ -1,5 +1,12 @@
 module Enumerable
   def my_each_with_index
+    return self unless block_given?
+
+    i = 0
+    for e in self
+      yield(e, i)
+      i += 1
+    end
   end
 end
 
