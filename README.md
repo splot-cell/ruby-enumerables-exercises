@@ -2,6 +2,13 @@
 
 This repository complements the [Custom Enumerables Project](https://www.theodinproject.com/lessons/ruby-custom-enumerables) in the Ruby Course for The Odin Project. The goal of this project is to reimplement common methods used frequently through the enumerables module with objects like arrays and hashes. This project will also familiarize you with how to work with blocks and procs. Some starter code and specs are provided to validate the correctness of your solutions.
 
+## Shortcomings
+
+I wrote my implementation of these methods so they would do the minimum required to pass the test suites. However, while doing so, I noticed a number of areas where the tests are not comprehensive:
+
+- All tests tests are run with Arrays. There are no tests using Hashes.
+- Tests always pass a block. There are no tests checking behaviour if a block is ommitted.
+
 ## Installation
 
 First, clone this repository with
