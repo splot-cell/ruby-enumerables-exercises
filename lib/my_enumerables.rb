@@ -36,6 +36,16 @@ module Enumerable
     end
     true
   end
+
+  def my_count
+    return self.size unless block_given?
+
+    result = 0
+    for e in self
+      result += 1 if yield(e)
+    end
+    result
+  end
 end
 
 class Array
