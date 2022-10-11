@@ -7,7 +7,8 @@ This repository complements the [Custom Enumerables Project](https://www.theodin
 I wrote my implementation of these methods so they would do the minimum required to pass the test suites. However, while doing so, I noticed a number of areas where the tests are not comprehensive:
 
 - All tests tests are run with Arrays. There are no tests using Hashes.
-- Tests always pass a block. There are no tests checking behaviour if a block is ommitted.
+- Tests (almost) always pass a block. There are few tests checking behaviour if a block is ommitted.
+- Tests do not check functionality if the function is passed an argument that is not a block.
 
 ## Installation
 
