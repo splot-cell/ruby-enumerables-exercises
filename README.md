@@ -1,78 +1,31 @@
 # Custom Enumerable Project
 
-This repository complements the [Custom Enumerables Project](https://www.theodinproject.com/lessons/ruby-custom-enumerables) in the Ruby Course for The Odin Project. The goal of this project is to reimplement common methods used frequently through the enumerables module with objects like arrays and hashes. This project will also familiarize you with how to work with blocks and procs. Some starter code and specs are provided to validate the correctness of your solutions.
+My fork of the repository complementing the [Custom Enumerables Project](https://www.theodinproject.com/lessons/ruby-custom-enumerables) in the Ruby Course for The Odin Project.
+
+## Desciption
+
+Reimplementation of common methods found in the enumerable modules.
+
+## Learning objectives
+
+- Familiarize with blocks and procs
+- Gain greater understanding of Enum module methods
+- Practice TDD
+- Upon completion of additional tasks shown in *Shortcomings* below, to gain a greater understanding of writing flexible methods for library use in Ruby
 
 ## Shortcomings
 
-I wrote my implementation of these methods so they would do the minimum required to pass the test suites. However, while doing so, I noticed a number of areas where the tests are not comprehensive:
+I wrote my implementation of these methods so they would do the minimum required to pass the provided test suites. However, while doing so, I noticed a number of areas where the tests are not comprehensive:
 
 - All tests tests are run with Arrays. There are no tests using Hashes.
-- Tests (almost) always pass a block. There are few tests checking behaviour if a block is ommitted.
-- Tests do not check functionality if the function is passed an argument that is not a block.
+- Tests (almost) always pass a block. There is only one test (for my_count) checking behaviour if a block is ommitted.
+- Tests do not check functionality if the function is passed an argument that is not a block. The exception is for my_inject, where tests always pass an arguement, and instead do not test the opposite, i.e. behaviour when no "init_value" is passed.
 
-## Installation
-
-First, clone this repository with
-
-```bash
-git clone git@github.com:TheOdinProject/custom_enumerable_project.git
-```
-
-Then, navigate into the folder through your command line with
-
-```bash
-cd custom_enumerable_project
-```
-
-and install the dependencies using the command
-
-```bash
-bundle install
-```
-
-## Getting Started
-
-You will add new methods to the `Enumerable` module in `lib/my_enumerables.rb`. Before you implement a method, go to the corresponding spec file and watch the test fail by running
-
-```bash
-bundle exec rspec <spec_file>
-```
-
-You can find the associated spec file in the [methods section](#methods). Then, add the method to the enumerable module. Run the tests again using the same command until they pass.
-
-### Example
-
-As an example, before you start implementing the `my_each` method, run
-
-```bash
-bundle exec rspec spec/my_each_spec.rb
-```
-
-to see that the test fails as expected.
-
-Once you implement it, like so:
-
-```rb
-# lib/my_enumerables.rb
-
-class Array
-  def my_each
-    # Complete code
-  end
-end
-```
-
-run the command
-
-```bash
-bundle exec rspec spec/my_each_spec.rb
-```
-
-again to see if your code is correct or not.
+My intention is to write additional tests to cover these behaviours, and then update the code to pass these tests too. Progress will be recorded here.
 
 ### Methods
 
-The following table has the methods you will need to implement along with their associated specs, as outlined in the project instructions.
+The following table has the methods implemented.
 
 | Method                          | Spec File                       | Notes                                                                 |
 | ------------------------------- | ------------------------------- | --------------------------------------------------------------------- |
