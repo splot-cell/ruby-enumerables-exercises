@@ -29,6 +29,13 @@ module Enumerable
     end
     false
   end
+
+  def my_none?
+    for e in self
+      return false if yield(e)
+    end
+    true
+  end
 end
 
 class Array
