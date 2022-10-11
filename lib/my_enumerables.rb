@@ -22,6 +22,13 @@ module Enumerable
     end
     result
   end
+
+  def my_any?
+    for e in self
+      return true if yield(e)
+    end
+    false
+  end
 end
 
 class Array
