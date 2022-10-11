@@ -54,6 +54,14 @@ module Enumerable
     end
     result
   end
+
+  def my_inject(init_value)
+    result = init_value
+    for e in self
+      result = yield(result, e)
+    end
+    result
+  end
 end
 
 class Array
