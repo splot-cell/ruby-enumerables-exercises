@@ -14,6 +14,14 @@ module Enumerable
     end
     result
   end
+
+  def my_all?
+    result = true
+    for e in self
+      result = false unless yield(e)
+    end
+    result
+  end
 end
 
 class Array
